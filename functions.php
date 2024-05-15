@@ -17,8 +17,8 @@ function exclude_search_meta_box_html($post) {
     wp_nonce_field('exclude_search_update', 'exclude_search_nonce');
     $value = get_post_meta($post->ID, '_exclude_from_search', true);
     ?>
-    <label for="exclude_search_field">Exclude from search results:</label>
     <input type="checkbox" id="exclude_search_field" name="exclude_search_field" value="1" <?php checked($value, 1); ?>>
+    <label for="exclude_search_field">Exclude from Search Results:</label>
     <?php
 }
 
